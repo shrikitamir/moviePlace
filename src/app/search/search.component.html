@@ -1,0 +1,42 @@
+<div id="cover">
+  <form (submit)="onSubmit(movieName); $event.preventDefault()">
+    <div class="tb">
+      <div class="td">
+        <input
+          type="text"
+          name="movie"
+          [(ngModel)]="movieName"
+          placeholder="Batman..."
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="td" id="s-cover">
+        <button type="submit">
+          <div id="s-circle"></div>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </form>
+  <span class="error">{{ error }}</span>
+</div>
+
+<div class="movies-container">
+  <div class="movie-container" *ngFor="let movie of movies">
+    <img
+      [routerLink]="movie.imdbID"
+      class="movie-poster"
+      [src]="
+        movie.Poster !== 'N/A' ? movie.Poster : '../../assets/no-poster.png'
+      "
+      [alt]="movie.Title"
+    />
+    <div class="movie-title">
+      <p>{{ movie.Title }}</p>
+    </div>
+    <div class="movie-year">
+      <p>{{ movie.Year }}</p>
+    </div>
+  </div>
+</div>
