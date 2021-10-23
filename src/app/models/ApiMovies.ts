@@ -1,8 +1,8 @@
 import { MoviesInterface } from './Movies';
 
-export type ApiMovies = {
+export interface ApiMovies {
   Response: string;
   Search: MoviesInterface[];
   totalResults: string;
   Error?: string;
-};
+}

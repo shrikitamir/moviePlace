@@ -1,2 +1,3 @@
 # moviePlace
-Movie engine made in Angular.
+
+Movie search engine made in Angular.

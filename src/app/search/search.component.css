@@ -224,6 +224,20 @@ button span:after {
 
 @media (max-width: 500px) {
   #cover {
+    margin-right: -60px;
+  }
+}
+
+@media (max-width: 400px) {
+  #cover {
+    width: 474px;
+    margin-right: -49px;
+  }
+}
+
+@media (max-width: 320px) {
+  #cover {
+    width: 360px;
     margin-right: -20px;
   }
 }
